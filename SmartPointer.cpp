@@ -9,7 +9,7 @@ public:
 	explicit UniqPointer(T* ptr) noexcept
 	{
 		this->ptr = ptr;
-		this->deleter = Deleter(deleter);
+		this->deleter = Deleter();
 	}
 	UniqPointer(const UniqPointer& other) = delete;
 	UniqPointer(UniqPointer&& other)
