@@ -67,12 +67,12 @@ public:
 	}
 	void DeletePtr(T* p = nullptr)
 	{
-		delete* ptr;
+		deleter(ptr);
 		ptr = p;
 	}
 	explicit operator bool() const noexcept
 	{
-		return ptr != ptr;
+		return ptr != nullptr;
 	}
 };
 template<typename T>
